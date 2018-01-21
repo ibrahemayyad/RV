@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.asynctask.eutd.rv.Details">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:fitsSystemWindows="true"
+                android:transitionName="ImgName"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardElevation="8dp"
+                android:id="@+id/card"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.asynctask.eutd.rv.cMainTextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:transitionName="TitleName"
+                        android:text="Ibrahem Ayyad"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:orientation="horizontal">
+
+
+                            <com.asynctask.eutd.rv.cTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Email : "
+                                android:textStyle="bold"
+                                android:textSize="20dp"/>
+
+                            <com.asynctask.eutd.rv.cTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="example@gmail.com"
+                                android:transitionName="Email"
+                                android:id="@+id/email"
+                                android:textSize="20dp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+
+                            <com.asynctask.eutd.rv.cTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Number Phone : "
+                                android:textStyle="bold"
+                                android:textSize="20dp"/>
+
+                            <com.asynctask.eutd.rv.cTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0592231558"
+                                android:id="@+id/NumberPhone"
+                                android:textSize="20dp"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </FrameLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            style="@style/FABStyle"
+            android:layout_marginRight="15dp"
+            app:layout_anchor="@id/app_bar_layout"
+            android:src="@drawable/ic_share"
+            app:layout_anchorGravity="bottom|right|end" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab1"
+        style="@style/FABStyle"
+        android:layout_marginRight="75dp"
+        app:layout_anchor="@id/app_bar_layout"
+        android:src="@drawable/ic_call"
+        app:layout_anchorGravity="bottom|end" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab2"
+        style="@style/FABStyle"
+        android:layout_marginRight="135dp"
+        app:layout_anchor="@id/app_bar_layout"
+        android:src="@drawable/ic_sms"
+        app:layout_anchorGravity="bottom|right|end" />
+
+</android.support.design.widget.CoordinatorLayout>

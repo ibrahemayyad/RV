@@ -1,0 +1,52 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowContentTransitions" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="FABStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="borderWidth">0dp</item>
+        <item name="elevation">6dp</item>
+        <item name="pressedTranslationZ">12dp</item>
+        <item name="rippleColor">@android:color/white</item>
+    </style>
+
+    <style name="DialogSlide">
+
+        <item name="android:windowEnterAnimation">@anim/slid_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_rilt</item>
+
+
+    </style>
+    <style name="DialogScale">
+
+        <item name="android:windowEnterAnimation">@anim/scale_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_out</item>
+
+
+    </style>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="DialogSlide_up_dawn">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom</item>
+    </style>
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/colorAccent</item>
+    </style>
+
+    <style name="MyTheme">
+        <item name="android:background">@color/colorPrimaryWhite</item>
+    </style>
+</resources>

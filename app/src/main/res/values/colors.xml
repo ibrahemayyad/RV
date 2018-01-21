@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2872e2</color>
+    <color name="colorPrimaryWhite">#f9f9f9</color>
+    <color name="colorBtuoon">#855700</color>
+    <color name="colorPrimaryDark">#1f5ebe</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="accent">#FFEB3B</color>
+    <color name="error">#ea361e</color>
+    <color name="error2">#2872e2</color>
+    <color name="bg_row_background">#fa315b</color>
+    <color name="item_name">#535353</color>
+    <color name="description">#a9a9a9</color>
+</resources>

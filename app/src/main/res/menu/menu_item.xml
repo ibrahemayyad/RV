@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+   <!--<item-->
+    <!--android:id="@+id/action_search"-->
+    <!--android:icon="@drawable/ic_action_action_search"-->
+    <!--android:orderInCategory="100"-->
+    <!--android:title="Search..."-->
+    <!--app:showAsAction="always"-->
+    <!--/>-->
+   <item
+       android:id="@+id/action_search"
+       app:actionViewClass="com.amsen.par.searchview.AutoCompleteSearchView"
+       android:icon="@drawable/ic_action_action_search"
+       app:showAsAction="ifRoom|collapseActionView"
+       android:orderInCategory="100"
+       android:title="Search..." />
+
+   <item
+       android:id="@+id/menu_switch_layout"
+       android:title="switch"
+       app:showAsAction="always"
+       android:icon="@drawable/ic_span_1"/>
+</menu>
