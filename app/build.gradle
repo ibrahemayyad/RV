@@ -10,6 +10,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        renderscriptTargetApi 25
+        renderscriptSupportModeEnabled true
+
     }
     buildTypes {
         release {
@@ -39,6 +42,6 @@ dependencies {
     compile "com.andkulikov:transitionseverywhere:1.7.8"
     compile 'com.nightonke:boommenu:1.0.9'
     compile 'com.amsen.par:searchview:0.8.1'
-
+    compile 'com.ms-square:etsyblur:0.2.1'
     testCompile 'junit:junit:4.12'
 }

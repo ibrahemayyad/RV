@@ -1,6 +1,7 @@
 package com.asynctask.eutd.rv;
 
 import android.animation.Animator;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -17,6 +18,8 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -205,13 +208,14 @@ public class MainActivity extends AppCompatActivity   {
                 add = true;
                 DialogItem dialog = new DialogItem(view.getContext() );
 
+                DialogItem fragment = DialogItem.newInstance(MainActivity.this);
+                fragment.show(getSupportFragmentManager(), "dialog2");
+
+               // dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+               // dialog.getWindow().setWindowAnimations(R.style.DialogSlide_up_dawn);
 
 
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-                dialog.getWindow().setWindowAnimations(R.style.DialogSlide_up_dawn);
-
-
-                dialog.show();
+//                dialog.show();
             }
         });
 
@@ -249,7 +253,7 @@ public class MainActivity extends AppCompatActivity   {
 //                       snackbar.show();
 
                    }  else{
-                       editItem(position);
+                       editItem(new FragmentActivity(),MainActivity.this,position);
 
                    }
                }
@@ -453,14 +457,11 @@ private void initDialog(){
 
     }
 
-    public  static  void editItem(int position){
+    public static void editItem(FragmentActivity activity, Context context, int position){
          DialogItem.postion = position;
         GlobalData.natureModels = GlobalData.natureModelsList.get(position);
-        DialogItem dialog = new DialogItem(view.getContext() );
-
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        dialog.getWindow().setWindowAnimations(R.style.DialogSlide_up_dawn);
-        dialog.show();
+        DialogItem fragment = DialogItem.newInstance(context);
+        fragment.show(activity.getSupportFragmentManager(), "dialog2");
         dataAdapter.notifyDataSetChanged();
 //        removeView();
 //        edit_position = position;

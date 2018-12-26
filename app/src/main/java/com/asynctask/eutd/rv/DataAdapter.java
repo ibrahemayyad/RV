@@ -13,6 +13,7 @@ import android.os.Build;
 import android.os.Vibrator;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
@@ -225,7 +226,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
                                         ;break;
                                     case "Edit":
-                                           MainActivity.editItem(position);
+                                           MainActivity.editItem(new FragmentActivity(),context,position);
                                            notifyDataSetChanged();
                                         ;break;
                                     case "Copy":
